@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+@import "bluma";
+
+body {
+  background-color: #e8e8e8;
+}
+
+.main_box {
+  margin: auto;
+  background-color: #ffffff;
+  max-width: 600px;
+  min-height: 100vh;
+  border: solid,1px,#222222;
+  border-radius: 1em;
+  padding: 2em;
+  box-shadow: 0.2em;
+}
+
+table {
+  width: 100%;
+}
+
+h2 {
+  margin-top: 1em;
+}

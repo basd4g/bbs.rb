@@ -1,11 +1,11 @@
 <%= form_with(model: [ @topic, @topic.posts.build ], local: true) do |form| %>
   <p>
-    <%= form.label :contributor %><br>
-    <%= form.text_area :contributor %>
+    <%= form.label :contributor  %><br>
+    <%= form.text_field :contributor, class: "textarea" %>
   </p>
   <p>
     <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, class: "textarea" %>
   </p>
   <p>
     <%= form.submit %>

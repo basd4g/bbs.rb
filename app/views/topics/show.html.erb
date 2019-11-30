@@ -1,15 +1,15 @@
 
-<p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
-</p>
+<div class="main_box"> 
+
+<h1>Topic: <%= @topic.title %></h1>
  
 <p>
-  <strong>Description:</strong>
+  Description:
   <%= @topic.description %>
 </p>
 
 <h2>Posts</h2>
+
 <%= render @topic.posts %>
 
 <h2>Add a post:</h2>
@@ -17,3 +17,5 @@
 
 <%= link_to 'Back', topics_path %>
 | <%= link_to 'Edit', edit_topic_path(@topic) %>
+
+</div>
