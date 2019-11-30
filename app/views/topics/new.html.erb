@@ -1,31 +1,6 @@
-<%= form_with scope: :topic, url: topics_path, local: true do |form| %>
-  <% if @topic.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@topic.errors.count, "error") %>
-        prohibited this topic from being saved: 
-      </h2>
-      <ul>
-        <% @topic.errors.full_messages.each do |msg| %>
-          <li>
-            <%= msg %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
- 
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
 
+<h1>New topic</h1>
+ 
+<%= render 'form' %>
+ 
 <%= link_to 'Back', topics_path %>
