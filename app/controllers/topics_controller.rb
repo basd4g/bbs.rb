@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   def new
+    @topic = Topic.new
   end
 
   def index
@@ -13,8 +14,11 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topic_params)
 
-    @topic.save
-    redirect_to @topic
+    if @topic.save
+      redirect_to @topic
+    else
+      render 'new'
+    end
   end
 
   private
