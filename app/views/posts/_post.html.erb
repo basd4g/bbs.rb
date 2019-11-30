@@ -1,15 +1,12 @@
-<p>
-  <strong>Contributor:</strong>
-  <%= post.contributor %>
-</p>
-
-<p>
-  <strong>Post:</strong>
+<div class="post">
+<div class="text">
   <%= post.text %>
-</p>
-
-<p>
-  <%= link_to 'Destroy Post', [post.topic, post],
+</div>
+<div class="cotributor">
+  投稿者: <%= post.contributor %>
+  <%= link_to '削除', [post.topic, post],
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-</p>
+
+</div>
+</div>

@@ -1,13 +1,10 @@
 <%= form_with(model: [ @topic, @topic.posts.build ], local: true) do |form| %>
   <p>
-    <%= form.label :contributor  %><br>
-    <%= form.text_field :contributor, class: "textarea" %>
-  </p>
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text, class: "textarea" %>
-  </p>
-  <p>
+    投稿:<br>
+    <%= form.text_area :text, class: "textarea" %><br>
+
+    投稿者:<%= form.text_field :contributor, class: "textarea" %>
+  </p><p>
     <%= form.submit %>
   </p>
 <% end %>

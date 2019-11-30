@@ -37,3 +37,19 @@ table {
 h2 {
   margin-top: 1em;
 }
+
+#error_explanation {
+  border: solid, 2px, red;
+  border-radius: 0.5em;
+  padding: 1em;
+  width: 100%;
+}
+
+.post {
+  padding: 1em;
+  width:100%;
+}
+.contributor {
+  width:100%;
+  text-align:right;
+}

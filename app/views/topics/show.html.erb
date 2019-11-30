@@ -1,21 +1,21 @@
 
 <div class="main_box"> 
 
-<h1>Topic: <%= @topic.title %></h1>
+<h1>トピック: <%= @topic.title %></h1>
  
 <p>
-  Description:
+  説明:
   <%= @topic.description %>
 </p>
 
-<h2>Posts</h2>
+<h2>投稿一覧</h2>
 
 <%= render @topic.posts %>
 
-<h2>Add a post:</h2>
+<h2>新しい投稿をする</h2>
 <%= render "posts/form" %>
 
-<%= link_to 'Back', topics_path %>
-| <%= link_to 'Edit', edit_topic_path(@topic) %>
+<%= link_to '戻る', topics_path %>
+| <%= link_to '編集', edit_topic_path(@topic) %>
 
 </div>
