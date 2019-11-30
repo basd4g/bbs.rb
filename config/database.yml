@@ -23,8 +23,10 @@ default: &default
 
 development:
   <<: *default
-  database: bbs
-
+  database: <%= ENV['BBS_DATABASE_DATABASE'] %>
+  username: <%= ENV['BBS_DATABASE_USER'] %>
+  password: <%= ENV['BBS_DATABASE_PASSWORD'] %>
+  host:      <%= ENV['BBS_DATABASE_HOST'] %>
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -80,6 +82,7 @@ test:
 #
 production:
   <<: *default
-  database: bbs
-  username: bbs
+  database: <%= ENV['BBS_DATABASE_DATABASE'] %>
+  username: <%= ENV['BBS_DATABASE_USER'] %>
   password: <%= ENV['BBS_DATABASE_PASSWORD'] %>
+  url:      <%= ENV['BBS_DATABASE_URL'] %>
