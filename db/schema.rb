@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_30_110307) do
+ActiveRecord::Schema.define(version: 2019_11_30_134210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "posts", force: :cascade do |t|
+    t.string "contributor"
+    t.text "text"
+    t.bigint "topic_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["topic_id"], name: "index_posts_on_topic_id"
+  end
 
   create_table "topics", force: :cascade do |t|
     t.string "title"
@@ -22,4 +31,5 @@ ActiveRecord::Schema.define(version: 2019_11_30_110307) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "posts", "topics"
 end

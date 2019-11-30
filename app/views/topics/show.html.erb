@@ -9,5 +9,32 @@
   <%= @topic.description %>
 </p>
 
+<h2>Posts</h2>
+<% @topic.posts.each do |post| %>
+  <p>
+    <strong>Contributor:</strong>
+    <%= post.contributor %>
+  </p>
+  <p>
+    <strong>Post:</strong>
+    <%= post.text %>
+  </p>
+<% end %>
+
+<h2>Add a post:</h2>
+<%= form_with(model: [ @topic, @topic.posts.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :contributor %><br>
+    <%= form.text_field :contributor %>
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Back', topics_path %>
 | <%= link_to 'Edit', edit_topic_path(@topic) %>
