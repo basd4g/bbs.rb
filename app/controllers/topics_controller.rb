@@ -2,6 +2,10 @@ class TopicsController < ApplicationController
   def new
   end
 
+  def index
+    @topics = Topic.all
+  end
+
   def show
     @topic = Topic.find(params[:id])
   end
