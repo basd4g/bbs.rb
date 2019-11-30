@@ -1,0 +1,13 @@
+<%= form_with(model: [ @topic, @topic.posts.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :contributor %><br>
+    <%= form.text_area :contributor %>
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
