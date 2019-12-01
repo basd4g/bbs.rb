@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-@import "bluma";
 
 body {
   background-color: #e8e8e8;
