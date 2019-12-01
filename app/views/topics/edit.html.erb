@@ -2,6 +2,10 @@
 <div class="main_box"> 
 <h1>トピックを編集</h1>
 <%= render 'form' %>
- 
+
+   <p>
+    <%= link_to '削除', topic_path(@topic), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+
 <%= link_to '戻る', topics_path %>
 </div>
