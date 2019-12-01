@@ -1,8 +1,11 @@
 <div class="post">
+  <% if post.post_id != nil  %>
+     &gt;&gt; <a href="#post-<%= post.post_id %>"><%= post.post_id %></a>
+  <% end %>
 <div class="text">
-  <span id="post-<%= post.id %>" >
+  <span> <a name="post-<%= post.id %>" ></a>
     <%= post.id %>
-  </span>:
+  </span>: 
   <%= post.text %>
 
 </div>
@@ -11,6 +14,7 @@
   <%= link_to '削除', [post.topic, post],
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
+            <button onclick="document.getElementById('post_post_id').value= <%= post.id %> ; window.location.hash ='h2_new_post';">返信</button>
 
 </div>
 </div>

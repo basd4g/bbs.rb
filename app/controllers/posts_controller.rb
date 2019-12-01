@@ -14,6 +14,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:contributor, :text)
+      params.require(:post).permit(:contributor, :text, :post_id)
     end
 end

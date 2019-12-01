@@ -1,5 +1,10 @@
 <%= form_with(model: [ @topic, @topic.posts.build ], local: true) do |form| %>
   <p>
+  返信元:<%= form.number_field :post_id, class: "reply", readonly: true%>
+
+  <button onclick="document.getElementById('post_post_id').value='';window.location.hash ='h2_new_post';">×</button>
+
+<br>
     投稿:<br>
     <%= form.text_area :text, class: "textarea" %><br>
 
