@@ -1,4 +1,7 @@
 class TopicsController < ApplicationController
+
+  http_basic_authenticate_with name: ENV['BASIC_USER'], password: ENV['BASIC_PASSWORD'], except: [:new, :index, :show, :create]
+
   def new
     @topic = Topic.new
   end
