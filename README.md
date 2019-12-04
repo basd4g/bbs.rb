@@ -25,6 +25,8 @@ $ export BBS_DATABASE_DATABASE="yourDatabaseName"
 $ export BBS_DATABASE_USER="yourDatabaseUser"
 $ export BBS_DATABASE_PASSWORD="yourDatabasePassword"
 $ export BBS_DATABASE_HOST="localhost"
+$ export BASIC_USER="basicAuthUser"
+$ export BASIC_PASSWORD="basicAuthPassword"
 
 $ git clone https://github.com/basd4g/bbs.rb.git
 $ cd bbs.rb
